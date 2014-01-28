@@ -1,5 +1,6 @@
+;;A nice theme that reminds me of sublime text.
 (load-theme 'wombat)
-
+;;I kept having random tabs added to my yaml files, installing yaml mode fixed it.
 (require 'yaml-mode)
     (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
@@ -25,7 +26,7 @@
     (add-to-list 'default-frame-alist 
          (cons 'height (/ (- (x-display-pixel-height) 200)
                              (frame-char-height)))))))
-
+;;execute the above function, super handy for moving between large and small monitors a lot on a laptop.
 (set-frame-size-according-to-resolution)
 
 
