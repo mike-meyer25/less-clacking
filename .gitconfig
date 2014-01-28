@@ -2,4 +2,4 @@
 	name = Justin Larsen
 	email = justin.larsen@gmail.com
 [core]
-	excludesfile = /Users/justin/.gitignore_global
+	excludesfile = ~/.gitignore_global
