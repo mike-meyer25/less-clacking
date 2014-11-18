@@ -1,4 +1,12 @@
+#Because I type this every time anyways.
 alias ls='ls -la'
-#alias mars='java -jar ~/projects/school/cs3810/Mars4_3.jar'
+#For seeing used space.
+alias diskspace="du -S | sort -n -r |more"
+
+#For Lab machines at school...
+export PATH=$PATH:$HOME/Programs/SublimeText2/
+#Alias sublime_text to subl
+alias subl="sublime_text"
+
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
