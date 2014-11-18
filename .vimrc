@@ -13,16 +13,18 @@ set softtabstop=4
 filetype plugin indent on
 "turn on status in vim
 set laststatus=2
-
-set statusline=%t       "tail of the filename
+set statusline+=%-3.3n\                         " buffer number
+set statusline=%t                               "tail of the filename
 set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
-set statusline+=%{&ff}] "file format
-set statusline+=%h      "help file flag
-set statusline+=%m      "modified flag
-set statusline+=%r      "read only flag
-set statusline+=%y      "filetype
-set statusline+=%=      "left/right separator
-set statusline+=%c,     "cursor column
-set statusline+=%l/%L   "cursor line/total lines
-set statusline+=\ %P    "percent through file
-
+set statusline+=%{&ff}]                         "file format
+set statusline+=%h                              "help file flag
+set statusline+=%m                              "modified flag
+set statusline+=%r                              "read only flag
+set statusline+=%y                              "filetype
+set statusline+=%=                              "left/right separator
+set statusline+=%c,                             "cursor column
+set statusline+=%l/%L                           "cursor line/total lines
+set statusline+=\ %P                            "percent through file
+set statusline+=%=                               "right align
+set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\  " highlight
+"set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
