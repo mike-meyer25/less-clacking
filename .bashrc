@@ -22,5 +22,4 @@ WHITE="\[\033[37;1m\]"
 GREEN="\[\033[32;1m\]"
 BLUE="\[\033[34m\]"
 
-# Throw it all together 
 PS1="[${RESET}${GREEN}\u${NORMAL}@${BLUE}\h ${NORMAL}${YELLOW} \w${NORMAL}]\$ "
