@@ -2,8 +2,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-#Because I type this every time anyways.
-alias ls='ls -la'
+
 #For seeing used space.
 alias diskspace="du -S | sort -n -r |more"
 
