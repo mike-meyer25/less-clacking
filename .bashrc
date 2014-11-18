@@ -20,9 +20,8 @@ NORMAL="\[\033[0m\]"
 RED="\[\033[31;1m\]"
 YELLOW="\[\033[33;1m\]"
 WHITE="\[\033[37;1m\]"
-SMILEY="${WHITE}:)${NORMAL}"
-FROWNY="${RED}:(${NORMAL}"
-SELECT="if [ \$? = 0 ]; then echo \"${SMILEY}\"; else echo \"${FROWNY}\"; fi"
+GREEN="\[\033[32;1m\]"
+BLUE="\[\033[34m\]"
 
 # Throw it all together 
-PS1="${RESET}${YELLOW}\h${NORMAL} \`${SELECT}\` ${YELLOW}>${NORMAL} "
+PS1="[${RESET}${GREEN}\u${NORMAL}@${BLUE}\h ${NORMAL}${YELLOW} \w${NORMAL}]\$ "
