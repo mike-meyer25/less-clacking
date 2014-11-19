@@ -7,7 +7,7 @@ alias .....="cd ../../../.."
 alias diskspace="du -S | sort -n -r |more"
 
 #For Lab machines at school...
-export PATH=$PATH:$HOME/Programs/SublimeText2/
+export PATH=$PATH:$HOME/Programs/SublimeText2
 #Alias sublime_text to subl
 alias subl="sublime_text"
 

@@ -25,7 +25,7 @@ fi
 
 
 #Full LS print
-alias ls='ls -lart'
+alias ls='ls -larth'
 # -> Prevents accidentally clobbering files.
 alias mkdir='mkdir -p'
 #Human readable du/df
@@ -58,3 +58,4 @@ function extract()      # Handy Extract Program
     fi
 }
 
+export PATH=/usr/local/sbin:$PATH
