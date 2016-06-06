@@ -1,3 +1,6 @@
+# Load in the git branch prompt script.
+source ~/.git-prompt.sh
+
 #Process bash rc if it exists.
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
@@ -25,7 +28,7 @@ fi
 
 
 #Full LS print
-alias ls='ls -larth'
+alias lss='ls -larth'
 # -> Prevents accidentally clobbering files.
 alias mkdir='mkdir -p'
 #Human readable du/df
@@ -59,3 +62,9 @@ function extract()      # Handy Extract Program
 }
 
 export PATH=/usr/local/sbin:$PATH
+export ANDROID_PATH=/Users/justin/Library/Android/sdk
+export PATH=$PATH:$ANDROID_PATH/tools:$ANDROID_PATH/platform-tools
+
+
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
