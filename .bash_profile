@@ -5,12 +5,10 @@ source ~/.git-prompt.sh
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
-
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-
 #If bundle directory for pathogen doesn't exist, create it
 if [ ! -d "$HOME/.vim/bundle" ] ; then
     mkdir -p $HOME/.vim/bundle
@@ -24,20 +22,28 @@ if [ ! -f "$HOME/.vim/autoload/pathogen.vim" ]; then
         curl -LSso $HOME/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 fi
 
-
-
-
+#Aliases
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+#Human readable du/df
+alias du='du -kh'
+alias df='df -kTh'
+#For seeing used space.
+alias diskspace="du -S | sort -n -r |more"
+#Get Libpath
+alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
 #Full LS print
 alias lss='ls -larth'
 # -> Prevents accidentally clobbering files.
 alias mkdir='mkdir -p'
-#Human readable du/df
-alias du='du -kh'
-alias df='df -kTh'
-
-#Path and Lib alias
+#Display path
 alias path='echo -e ${PATH//:/\\n}'
-alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
+
+
+
+
 #From the tldp.org
 function extract()      # Handy Extract Program
 {
@@ -61,8 +67,13 @@ function extract()      # Handy Extract Program
     fi
 }
 
-export PATH=/usr/local/sbin:$PATH
+#exports
 export ANDROID_PATH=/Users/justin/Library/Android/sdk
+export CLICOLOR=1
+#Fallback libraries for compiling caffe with cuda
+export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/cuda/lib:$HOME/anaconda/lib:/usr/local/lib:/usr/lib
+export GREP_OPTIONS='--color=auto'
+export PATH=/usr/local/sbin:$PATH
 export PATH=$PATH:$ANDROID_PATH/tools:$ANDROID_PATH/platform-tools
 
 
