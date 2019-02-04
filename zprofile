@@ -1,50 +1,30 @@
-# Load in the git branch prompt script.
-source ~/.git-prompt.sh
 
-#Process bash rc if it exists.
-if [ -f ~/.bashrc ]; then
-  . ~/.bashrc
-fi
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-#If bundle directory for pathogen doesn't exist, create it
-if [ ! -d "$HOME/.vim/bundle" ] ; then
-    mkdir -p $HOME/.vim/bundle
-fi
-#If the pathogen directory doesn't exist, create it
-if [ ! -d "$HOME/.vim/autoload" ] ; then
-        mkdir -p $HOME/.vim/autoload 
-fi
-#Download vim pathogen package manager.
-if [ ! -f "$HOME/.vim/autoload/pathogen.vim" ]; then
-        curl -LSso $HOME/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-fi
 
-#Aliases
+# Aliases
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-#Human readable du/df
+# Human readable du/df
 alias du='du -kh'
 alias df='df -kTh'
-#For seeing used space.
+# For seeing used space.
 alias diskspace="du -S | sort -n -r |more"
-#Get Libpath
+# Get Libpath
 alias libpath='echo -e ${LD_LIBRARY_PATH//:/\\n}'
-#Full LS print
+# Full LS print
 alias lss='ls -larth'
+alias ls="ls -la"
 # -> Prevents accidentally clobbering files.
 alias mkdir='mkdir -p'
-#Display path
+# Display path
 alias path='echo -e ${PATH//:/\\n}'
 
-
-
-
-#From the tldp.org
+# From the tldp.org
 function extract()      # Handy Extract Program
 {
     if [ -f $1 ] ; then
@@ -67,15 +47,13 @@ function extract()      # Handy Extract Program
     fi
 }
 
-#exports
+# exports
 export ANDROID_PATH=/Users/justin/Library/Android/sdk
 export CLICOLOR=1
-#Fallback libraries for compiling caffe with cuda
+# fallback libraries for compiling caffe with cuda
 export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/cuda/lib:$HOME/anaconda/lib:/usr/local/lib:/usr/lib
 export GREP_OPTIONS='--color=auto'
 export PATH=/usr/local/sbin:$PATH
-export PATH=$PATH:$ANDROID_PATH/tools:$ANDROID_PATH/platform-tools
 
-
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

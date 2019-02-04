@@ -1,7 +1,0 @@
-[user]
-	name = Justin Larsen
-	email = justin.larsen@gmail.com
-[core]
-	excludesfile = ~/.gitignore_global
-[push]
-	default = simple

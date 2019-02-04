@@ -1,0 +1,122 @@
+#  Build Artifacts  #
+# & Compiled Source #
+#####################
+*.cache
+*.com
+*.class
+*.dll
+*.exe
+*.g.props
+*.g.targets
+*.o
+*.pyc
+*.so
+*.user
+.pytest_cache/
+.vs/
+.yarn-cache
+/_build
+bin/
+build/
+DesignTimeBuild/
+obj/
+coverage
+dist
+.pytest_cache
+.sobelow
+
+# Autodocs #
+############
+/doc
+docs/
+
+# front-end and Archives #
+#########################
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+node_modules
+
+# OS files and directories #
+############################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+uploads
+@Recycle/
+cypress/videos/
+
+# Databases #
+#############
+*.sqlite
+/db
+
+# Logs, Mem Dumps, etc #
+########################
+*.log
+logfile
+*.dump
+*.dmp
+
+# Flat Files #
+##############
+*.csv
+*.txt
+*.xls*
+!requirements.txt
+
+# Editor Artifacts #
+####################
+*.suo
+*.swp
+*.swo
+*.swn
+*.swm
+*.swl
+*.swk
+.idea/
+*.sublime-*
+.vscode/*
+
+# Environment Artifacts #
+#########################
+front-end/*/lib/
+/deps
+/node_modules
+venv/
+.env
+.terraform
+.ackrc
+.vimlocal
+stats.json
+styleguide.sketchplugin
+
+
+# App artifacts #
+#################
+/*.ez
+# Since we are building assets from web/static,
+# we ignore priv/static. You may want to comment
+# this depending on your deployment strategy.
+/priv/static/
+# The config/prod.secret.exs file by default contains sensitive
+# data and you should not commit it into version control.
+#
+# Alternatively, you may comment the line below and commit the
+# secrets file as long as you replace its contents by environment
+# variables.
+/config/prod.secret.exs
+# Google ads builds a yaml file when it executes
+googleads.yaml
+# TODO: remove after fb is ready to go
+sample_auth_and_fields.json
+

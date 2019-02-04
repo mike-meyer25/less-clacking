@@ -1,0 +1,9 @@
+[user]
+	email = justin@strala.com
+	name = Justin Larsen
+
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
+[push]
+    default = simple
