@@ -2,7 +2,8 @@
 
 ### Tap brew casks as needed ###
 brew tap thoughtbot/formulae
-
+brew tap sambadevi/powerlevel9k
+brew tap caskroom/fonts
 ### Update brew ###
 brew update
 
@@ -22,7 +23,8 @@ brew install tig
 brew install vim
 brew install wget
 brew install zsh zsh-completions
-
+brew install powerlevel9k
+brew install imagemagick
 ### Install applications with brew cask ###
 
 brew cask install dropbox
@@ -39,7 +41,7 @@ brew cask install discord
 brew cask install visual-studio-code
 brew cask install font-hack-nerd-font
 brew cask install iterm2
-
+brew cask install font-hack-nerd-font
 ### macOS specific settings ###
 
 # Finder: show all filename extensions
@@ -104,8 +106,8 @@ if [ ! -d "$HOME/.vim/autoload" ] ; then
 fi
 # Download vim pathogen package manager.
 if [ ! -f "$HOME/.vim/autoload/pathogen.vim" ]; then
-curl -Sso ~/.vim/autoload/pathogen.vim \
-    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+    curl -Sso ~/.vim/autoload/pathogen.vim \
+        https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 fi
 # If vim colors directory doesn't exist, create it.
 if [ ! -d "$HOME/.vim/colors" ] ; then

@@ -3,7 +3,6 @@
 execute pathogen#infect()
 "Turns on syntax coloration
 syntax on
-colorscheme apprentice
 "Turn off funky auto-indenting
 set paste
 "Setup editor for PEP 8 Compliance

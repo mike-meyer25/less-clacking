@@ -39,3 +39,8 @@ eval "$(pyenv virtualenv-init -)"
 # Aliases
 unalias grv
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/justin/dev/spectrum/services-api/refractor/core/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/justin/dev/spectrum/services-api/refractor/core/node_modules/tabtab/.completions/slss.zsh
+. $(brew --prefix asdf)/asdf.sh
