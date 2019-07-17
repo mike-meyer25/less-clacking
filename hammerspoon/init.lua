@@ -1,4 +1,4 @@
-local modal = {"cmd", "alt"}
+local modal = {"cmd", "ctrl"}
 local superMenu = hs.menubar.new()
 function setSuperMenuDisplay(state)
     if state then
