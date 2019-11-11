@@ -1,9 +1,12 @@
+#!/bin/bash
+script_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+
 # Mac OS install script largely stolen from @rowofpixels.
 
 ### Tap brew casks as needed ###
 brew tap thoughtbot/formulae
 brew tap sambadevi/powerlevel9k
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 ### Update brew ###
 brew update
 
@@ -17,6 +20,7 @@ brew install git
 brew install nvm
 brew install pyenv
 brew install pyenv-virtualenv
+brew install pipenv
 brew install rcm
 brew install terraform
 brew install tig
@@ -41,7 +45,7 @@ brew cask install discord
 brew cask install visual-studio-code
 brew cask install font-hack-nerd-font
 brew cask install iterm2
-brew cask install font-hack-nerd-font
+brew cask install hammerspoon
 ### macOS specific settings ###
 
 # Finder: show all filename extensions
@@ -90,7 +94,7 @@ done
 ### Terminal setup ###
 
 # setup theme
-if [ ! -d "$HOME/.oh-my-zsh/custom/themes/powerlevel9k"] ; then
+if [ ! -d "$HOME/.oh-my-zsh/custom/themes/powerlevel9k" ] ; then
     git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 fi
 
@@ -106,18 +110,17 @@ if [ ! -d "$HOME/.vim/autoload" ] ; then
 fi
 # Download vim pathogen package manager.
 if [ ! -f "$HOME/.vim/autoload/pathogen.vim" ]; then
-    curl -Sso ~/.vim/autoload/pathogen.vim \
-        https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+    mkdir -p $HOME/.vim/autoload $HOME/.vim/bundle
+    curl -LSso $HOME/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 fi
 # If vim colors directory doesn't exist, create it.
 if [ ! -d "$HOME/.vim/colors" ] ; then
         mkdir -p $HOME/.vim/colors
 fi
 # install apprentice vim color theme
-if [ ! -f "$HOME/.vim/colors/apprentice.vim"] ; then
-        cp vim/colors/apprentice.vim $HOME/.vim/colors/
+if [ ! -f "$HOME/.vim/colors/apprentice.vim" ] ; then
+        cp $script_path/vim/colors/apprentice.vim $HOME/.vim/colors/
 fi
-
 
 ### Dotfile
 rcup gitconfig
