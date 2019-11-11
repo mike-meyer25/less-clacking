@@ -12,6 +12,7 @@ brew update
 
 ### Install brew packages ###
 brew install autojump
+brew install asdf
 brew install cmake
 brew install erlang
 brew install elixir
@@ -92,6 +93,9 @@ for app in "Dock" "Finder"; do
 done
 
 ### Terminal setup ###
+if [ ! -d "$HOME/.oh-my-zsh/" ] ; then
+    bash <(curl -s https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)
+fi
 
 # setup theme
 if [ ! -d "$HOME/.oh-my-zsh/custom/themes/powerlevel9k" ] ; then
@@ -128,3 +132,4 @@ rcup gitignore
 rcup zprofile
 rcup vimrc
 rcup zshrc
+rcup hammerspoon
