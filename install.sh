@@ -99,7 +99,7 @@ fi
 
 # setup theme
 if [ ! -d "$HOME/.oh-my-zsh/custom/themes/powerlevel9k" ] ; then
-    git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+    git clone https://github.com/bhilburn/powerlevel9k.git $HOME/.oh-my-zsh/custom/themes/powerlevel9k
 fi
 
 ### vim setup ###
@@ -127,6 +127,7 @@ if [ ! -f "$HOME/.vim/colors/apprentice.vim" ] ; then
 fi
 
 ### Dotfile
+cd $script_path
 rcup gitconfig
 rcup gitignore
 rcup zprofile
