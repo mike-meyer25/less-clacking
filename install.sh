@@ -30,6 +30,7 @@ brew install wget
 brew install zsh zsh-completions
 brew install powerlevel9k
 brew install imagemagick
+brew install postgresql
 ### Install applications with brew cask ###
 
 brew cask install dropbox
