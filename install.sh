@@ -13,6 +13,7 @@ brew update
 ### Install brew packages ###
 brew install autojump
 brew install asdf
+brew install awscli
 brew install cmake
 brew install erlang
 brew install elixir
