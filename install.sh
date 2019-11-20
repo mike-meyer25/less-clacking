@@ -60,6 +60,9 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
+# Dock: disable recents section of dock
+defaults write com.apple.dock show-recents -bool false
+
 # Disable the extension change warning in OS X Finder
 # http://www.defaults-write.com/disable-the-extension-change-warning-in-os-x-finder/
 # Revert to the default
