@@ -25,6 +25,8 @@ bash ~/.dotfiles/install.sh
 
 # Update Python Mac Env
 Install pyenv `brew install pyenv`
+
 Install python - `pyenv install 3.8.0`
+
 Set the global python env - `pyenv global 3.8.0`
 
