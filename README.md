@@ -3,6 +3,20 @@ I'm tired of resetting up my shell as I move around from machine to machine, so 
 
 # Prerequisites 
 
+## Generate RSA Key
+* Open Terminal and generate a key
+`ssh-keygen`
+* Output
+  mikemeyer@Mikes-MacBook-Pro ~ % ssh-keygen
+  Generating public/private rsa key pair.
+  Enter file in which to save the key (/Users/mikemeyer/.ssh/id_rsa): 
+  Created directory '/Users/mikemeyer/.ssh'.
+  Enter passphrase (empty for no passphrase): 
+  Enter same passphrase again: 
+  Your identification has been saved in /Users/mikemeyer/.ssh/id_rsa.
+  Your public key has been saved in /Users/mikemeyer/.ssh/id_rsa.pub.
+* Get the key `cat ~/.ssh/id_rsa.pub`
+
 ## Package Management
 On Mac OS, currently using [Homebrew](https://brew.sh/)
 
