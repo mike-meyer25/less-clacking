@@ -20,7 +20,7 @@ brew install rcm
 # Installation
 
 ```
-git clone git@github.com:JusLarsen/less-clacking.git ~/.dotfiles
+git clone git@github.com:mikemeyer/less-clacking.git ~/.dotfiles
 bash ~/.dotfiles/install.sh
 ```
 
