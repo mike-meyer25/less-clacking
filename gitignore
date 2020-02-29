@@ -40,7 +40,9 @@ docs/
 *.rar
 *.tar
 *.zip
+*.DS_Store
 node_modules
+
 
 # OS files and directories #
 ############################
