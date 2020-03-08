@@ -16,6 +16,14 @@ I'm tired of resetting up my shell as I move around from machine to machine, so 
   Your identification has been saved in /Users/mikemeyer/.ssh/id_rsa.
   Your public key has been saved in /Users/mikemeyer/.ssh/id_rsa.pub.
 * Get the key `cat ~/.ssh/id_rsa.pub`
+* Create config file `touch ~/.ssh/config`
+* Add the following to the config file
+```
+Host github.com
+HostName github.com
+IdentityFile ~/.ssh/privatekeyfile
+User mike-meyer25
+```
 
 ## Package Management
 On Mac OS, currently using [Homebrew](https://brew.sh/)
