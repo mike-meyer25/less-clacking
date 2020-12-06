@@ -10,7 +10,7 @@ plugins=(
 )
 
 # load zsh
-export ZSH="/Users/mmeyer/.oh-my-zsh"
+export ZSH="/Users/mikemeyer/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 # nvm versions directory setup
@@ -31,10 +31,10 @@ eval "$(pyenv virtualenv-init -)"
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/justin/dev/spectrum/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/justin/dev/spectrum/node_modules/tabtab/.completions/serverless.zsh
+[[ -f /Users/mikemeyer/dev/spectrum/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/mikemeyer/dev/spectrum/node_modules/tabtab/.completions/serverless.zsh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/justin/dev/spectrum/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/justin/dev/spectrum/node_modules/tabtab/.completions/sls.zsh
+[[ -f /Users/mikemeyer/dev/spectrum/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/mikemeyer/dev/spectrum/node_modules/tabtab/.completions/sls.zsh
 
 # Aliases
 unalias grv
@@ -44,5 +44,5 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/justin/dev/spectrum/services-api/refractor/core/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/justin/dev/spectrum/services-api/refractor/core/node_modules/tabtab/.completions/slss.zsh
+[[ -f /Users/mikemeyer/dev/spectrum/services-api/refractor/core/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/mikemeyer/dev/spectrum/services-api/refractor/core/node_modules/tabtab/.completions/slss.zsh
 . $(brew --prefix asdf)/asdf.sh
