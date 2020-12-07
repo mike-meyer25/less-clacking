@@ -14,6 +14,7 @@ brew update
 brew install autojump
 brew install asdf
 brew install awscli
+brew install boostnote
 brew install cmake
 brew install erlang
 brew install elixir
