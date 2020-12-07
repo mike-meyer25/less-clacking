@@ -20,6 +20,7 @@ brew install erlang
 brew install elixir
 brew install gcc
 brew install git
+brew install node
 brew install nvm
 brew install pyenv
 brew install pyenv-virtualenv
