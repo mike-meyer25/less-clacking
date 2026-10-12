@@ -14,11 +14,11 @@ brew update
 brew install autojump
 brew install asdf
 brew install awscli
-brew install boostnote
 brew install cmake
 brew install erlang
 brew install elixir
 brew install gcc
+brew install graphviz
 brew install git
 brew install node
 brew install nvm
@@ -39,10 +39,8 @@ brew install postgresql
 brew install dropbox --cask
 brew install docker --cask
 brew install sublime-text --cask
-brew install spotify --cask
 brew install firefox --cask
 brew install slack --cask
-brew install vlc --cask
 brew install postman --cask
 brew install postico --cask
 brew install base --cask
@@ -50,7 +48,42 @@ brew install discord --cask
 brew install visual-studio-code --cask
 brew install font-hack-nerd-font --cask
 brew install iterm2 --cask
-brew install hammerspoon --cask
+
+### VS Code extensions ###
+vscode_extensions=(
+    amazonwebservices.aws-toolkit-vscode
+    ckolkman.vscode-postgres
+    codacy-app.codacy
+    cweijan.dbclient-jdbc
+    cweijan.vscode-postgresql-client2
+    dbaeumer.vscode-eslint
+    docker.docker
+    dotjoshjohnson.xml
+    firsttris.vscode-jest-runner
+    github.vscode-github-actions
+    janisdd.vscode-edit-csv
+    mechatroner.rainbow-csv
+    ms-azuretools.vscode-containers
+    ms-azuretools.vscode-docker
+    ms-dotnettools.csdevkit
+    ms-dotnettools.csharp
+    ms-dotnettools.vscode-dotnet-runtime
+    ms-python.debugpy
+    ms-python.python
+    ms-python.vscode-pylance
+    ms-python.vscode-python-envs
+    ms-toolsai.jupyter
+    ms-toolsai.jupyter-keymap
+    ms-toolsai.jupyter-renderers
+    ms-toolsai.vscode-jupyter-cell-tags
+    ms-toolsai.vscode-jupyter-slideshow
+    tal7aouy.indent-colorizer
+    vscjava.vscode-gradle
+)
+for extension in "${vscode_extensions[@]}"; do
+    code --install-extension "$extension"
+done
+
 
 ### NVM ###
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
@@ -147,4 +180,3 @@ rcup gitignore
 rcup zprofile
 rcup vimrc
 rcup zshrc
-rcup hammerspoon
